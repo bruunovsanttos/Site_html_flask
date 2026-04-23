@@ -1,11 +1,16 @@
 from flask import Flask
 from app.database.db import db
+import os
 
 
 def create_app():
-    app = Flask(__name__,
-                template_folder="app/templates",
-                static_folder="app/static")
+    base_dir = os.path.abspath(os.path.dirname(__file__))
+
+    app = Flask(
+        __name__,
+        template_folder=os.path.join(base_dir, "templates"),
+        static_folder=os.path.join(base_dir, "static")
+    )
 
     app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///database.db"
     app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False #desativa rastreamento e melhora a performance
