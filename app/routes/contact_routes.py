@@ -5,7 +5,7 @@ from app.models.contact import Contact
 contato_bp = Blueprint("contact", __name__)
 
 
-@contato_bp.route("/contact", methods=["POST"])
+@contato_bp.route("/contato", methods=["POST"])
 def receber_contato():
 
     nome = request.form.get("nome")
@@ -18,7 +18,7 @@ def receber_contato():
         return "Preencha todos os campos obrigatórios!", 400
 
 
-    novo_contato = contact(
+    novo_contato = Contact(
         nome=nome,
         telefone=telefone,
         email=email,
