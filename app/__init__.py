@@ -13,7 +13,7 @@ def create_app():
 
     from app.models.contact import Contact
 
-    from app.routes.contato_routes import contato_bp
+    from app.routes.contact_routes import contato_bp
     from app.routes.main_routes import main_bp
 
     app.register_blueprint(contato_bp)

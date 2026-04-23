@@ -1,11 +1,11 @@
 from flask import Blueprint, request
 from app.database.db import db
-from app.models.contato import Contact
+from app.models.contact import Contact
 
-contato_bp = Blueprint("contato", __name__)
+contato_bp = Blueprint("contact", __name__)
 
 
-@contato_bp.route("/contato", methods=["POST"])
+@contato_bp.route("/contact", methods=["POST"])
 def receber_contato():
 
     nome = request.form.get("nome")
@@ -18,7 +18,7 @@ def receber_contato():
         return "Preencha todos os campos obrigatórios!", 400
 
 
-    novo_contato = Contact(
+    novo_contato = contact(
         nome=nome,
         telefone=telefone,
         email=email,
