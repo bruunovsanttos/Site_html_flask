@@ -2,7 +2,7 @@
 from datetime import datetime
 from app.database.db import db
 
-class contact(db.Model):
+class Contact(db.Model):
     __tablename__ = "contacts"
 
     id = db.Column(db.Integer, primary_key=True)
@@ -14,8 +14,8 @@ class contact(db.Model):
     mensagem = db.Column(db.Text, nullable=False)
 
     data_envio = db.Column(
-        db.datetime,
-        default=datetime.utcnow(),
+        db.DateTime,
+        default=datetime.utcnow,
         nullable=False
     )
     def __repr__(self):
