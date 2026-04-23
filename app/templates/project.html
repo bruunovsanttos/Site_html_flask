@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projetos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="/">Início</a></li>
+                <li><a href="/contato">Contato</a></li>
+            </ul>
+        </nav>
+
+        <header>
+            <h1>Projetos</h1>
+        </header>
+
+        <main>
+            <h3>Projetos</h3>
+            <p>
+                Aqui você pode encontrar alguns
+                <a href="https://github.com/bruunovsanttos/Portifolio" target="_blank">projetos</a> meus já feitos.
+            </p>
+
+            <ul>
+                <li><a href="#readme">Como Criar um Bom README</a></li>
+                <li><a href="#todo">API ToDo List</a></li>
+                <li><a href="#site">Site</a></li>
+            </ul>
+
+            <h3 id="readme">Como Criar um bom README</h3>
+            <p>Projeto mostrando boas práticas de documentação.</p>
+            <img src="{{ url_for('static', filename='img/comocriarumbomreadme.jpg') }}">
+
+            <h3 id="todo">API ToDo List</h3>
+            <p>API com Flask, autenticação e banco de dados.</p>
+            <img src="{{ url_for('static', filename='img/apilistadetarefas.jpg') }}">
+
+            <h3 id="site">Site</h3>
+            <p>Projeto do seu portfólio com HTML, CSS e Flask.</p>
+        </main>
+
+        <footer>
+            <a href="https://github.com/bruunovsanttos" target="_blank">
+                <img src="{{ url_for('static', filename='img/github.svg') }}">
+                <p>Github</p>
+            </a>
+
+            <a href="https://www.linkedin.com/in/brunovieirasantos/" target="_blank">
+                <img src="{{ url_for('static', filename='img/linkedin.svg') }}">
+                <p>LinkedIn</p>
+            </a>
+        </footer>
+    </div>
+</body>
+</html>

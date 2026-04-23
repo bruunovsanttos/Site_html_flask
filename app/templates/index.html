@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bruno Santos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="/">Início</a></li>
+                <li><a href="/projetos">Projetos</a></li>
+                <li><a href="/contato">Contato</a></li>
+            </ul>
+        </nav>
+
+        <header>
+            <div class="center">
+                <img src="{{ url_for('static', filename='img/foto de perfil.jfif') }}">
+            </div>
+            <h1>Bruno Santos</h1>
+            <h2>Desenvolvedor de Software</h2>
+        </header>
+
+        <main>
+            <section>
+                <h3>Sobre mim</h3>
+                <p>Me chamo Bruno Santos, tenho 33 anos, curso Análise e Desenvolvimento de Sistemas na Universidade Anhembi Morumbi, com previsão de término em junho de 2027, e sou programador Back-end.</p>
+                <p>Trabalhando há mais de quinze anos na área da mecânica e metalúrgica, optei por fazer uma nova escolha na minha vida: a tecnologia.</p>
+                <p>Decidi virar programador porque acredito que a programação está presente em quase tudo. Sendo assim, entrou na minha vida como uma forma de evolução pessoal e construção de um futuro melhor.</p>
+            </section>
+
+            <section>
+                <h3>Formação</h3>
+                <p>Tecnologia em Automação Industrial - Anhanguera Educacional (2015)</p>
+                <p>Análise e Desenvolvimento de Sistemas - Anhembi Morumbi (2027)</p>
+            </section>
+
+            <section>
+                <h3>Cursos</h3>
+                <p>HTML - DIO</p>
+                <p>Python - FIAP</p>
+                <p>Banco de Dados Relacionais - DIO</p>
+                <p>Flask - DIO</p>
+            </section>
+        </main>
+
+        <footer>
+            <a href="https://github.com/bruunovsanttos" target="_blank">
+                <img src="{{ url_for('static', filename='img/github.svg') }}">
+                <p>Github</p>
+            </a>
+
+            <a href="https://www.linkedin.com/in/brunovieirasantos/" target="_blank">
+                <img src="{{ url_for('static', filename='img/linkedin.svg') }}">
+                <p>LinkedIn</p>
+            </a>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="/">Início</a></li>
+                <li><a href="/projetos">Projetos</a></li>
+            </ul>
+        </nav>
+
+        <header>
+            <h1>Contato</h1>
+        </header>
+
+        <main>
+            <p>Preencha o formulário para entrar em contato.</p>
+
+            <form action="/contato" method="POST">
+                <fieldset>
+                    <legend>Formulário de contato</legend>
+
+                    <label>Nome:</label>
+                    <input type="text" name="nome">
+
+                    <label>Telefone:</label>
+                    <input type="text" name="telefone">
+
+                    <label>E-mail:</label>
+                    <input type="email" name="email">
+
+                    <label>Mensagem:</label>
+                    <textarea name="mensagem"></textarea>
+
+                    <button type="submit">Enviar</button>
+                    <button type="reset">Limpar</button>
+                </fieldset>
+            </form>
+        </main>
+
+        <footer>
+            <a href="https://github.com/bruunovsanttos" target="_blank">
+                <img src="{{ url_for('static', filename='img/github.svg') }}">
+                <p>Github</p>
+            </a>
+
+            <a href="https://www.linkedin.com/in/brunovieirasantos/" target="_blank">
+                <img src="{{ url_for('static', filename='img/linkedin.svg') }}">
+                <p>LinkedIn</p>
+            </a>
+        </footer>
+    </div>
+</body>
+</html>
