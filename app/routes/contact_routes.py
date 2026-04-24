@@ -11,7 +11,7 @@ def receber_contato():
     nome = request.form.get("nome")
     telefone = request.form.get("telefone")
     email = request.form.get("email")
-    mensagem = request.form.get("mensagem")
+    mensagem = request.form.get("mensagem") 
 
 
     if not nome or not telefone or not email or not mensagem:
