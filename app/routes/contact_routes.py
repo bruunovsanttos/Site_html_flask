@@ -1,4 +1,4 @@
-from flask import Blueprint, request
+from flask import Blueprint, request, redirect, url_for, flash
 from app.database.db import db
 from app.models.contact import Contact
 
@@ -11,7 +11,7 @@ def receber_contato():
     nome = request.form.get("nome")
     telefone = request.form.get("telefone")
     email = request.form.get("email")
-    mensagem = request.form.get("mensagem") 
+    mensagem = request.form.get("mensagem")
 
 
     if not nome or not telefone or not email or not mensagem:
@@ -30,4 +30,7 @@ def receber_contato():
     db.session.commit()
 
 
-    return "Mensagem enviada com sucesso!"
+    flash("Mensagem enviada com sucesso!", "sucesso")
+
+    # redireciona para o home do site apos a mensagem
+    return redirect(url_for("main.home"))

@@ -1,4 +1,5 @@
 from flask import Flask
+from config import Config
 from app.database.db import db
 import os
 
@@ -12,8 +13,7 @@ def create_app():
         static_folder=os.path.join(base_dir, "static")
     )
 
-    app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///database.db"
-    app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False #desativa rastreamento e melhora a performance
+    app.config.from_object(Config)
 
     db.init_app(app)
 
